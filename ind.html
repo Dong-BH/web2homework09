@@ -1,0 +1,822 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>食相印</title>
+<style type="text/css">
+    *{
+      margin:0;
+      padding:0;
+    }
+    ul{
+        list-style:none;
+    }
+    a{
+        text-decoration:none;
+    }
+    a {
+      color:#222;text-decoration:none
+    }
+    a:hover,.two_title p a:hover{
+      color:#0eb468;
+    }
+    .header{ 
+      width: 100%;
+      height: 100px;
+      background: url(topbj.png) repeat-x;
+    }
+    .top{ 
+      width:1370px;
+      height:100px; 
+      padding-right: 15px;
+      padding-left: 15px; margin: auto;
+    }
+    .top_content{
+       width:1100px;
+      height:auto; 
+      margin:0px auto;
+    }
+    .logo{ 
+      width:173px; 
+      height:48px; 
+      float:left; 
+      margin:20px 0px 0px 0px;
+    }
+    .top_le_nav
+    {
+      float:left;
+      line-height:48px; 
+      padding-top: 25px; 
+      vertical-align:middle; 
+      margin-left:30px;
+    }
+    .top_le_nav a{
+      position: relative;
+      display: inline-block;
+      outline: none;
+      color: #222222;
+      text-decoration: none;
+      text-shadow: 0 0 1px rgba(255,255,255,0.3);
+      font-size: 18px;
+      margin: 0 18px;
+      padding: 0 2px 10px 2px;
+      vertical-align: middle;
+    }
+    .top_le_nav a:hover{
+      color: #0eb468;
+    }
+    .search{
+      float:left;
+      width:240px;
+      height:28px;
+      font-size:14px;
+      border:1px solid rgb(0,0,0 1);
+      margin-top:15px;
+      margin-left:30px;
+    }
+    .submit{
+      float:left;
+      width:30px;
+      height:32px;
+      background:rgba(255,227,132) url(fa-search.png) no-repeat center center;
+      border:none;
+      margin-top:15px;
+    }
+    .form{
+      float:right;
+    }
+    .box{ 
+      width:1100px; 
+      margin:20px auto 0;
+    }
+    .clear{
+      content:"";
+      height:0px;
+      font-size:0px; 
+      clear:both;
+    }
+/*    .banner img{
+      display: block; 
+      width: 100%;
+      height: auto;
+    }*/
+    .lanse_box{
+      width: 100%; height: 500px; background:#5dade2;
+    }
+    .Purpose {
+      max-width: 1920px;
+      height: 500px;
+      background: url(syPurpose.jpg) no-repeat center;
+      margin: 0 auto;
+      overflow: hidden; margin-top: 80px;}
+      .container2 {
+      width: 1200px; margin: auto;
+    }
+    .pur {
+      width: 500px;
+      height: 220px;
+      background: rgba(255, 255, 255, 0.6);
+      margin: 60px auto;
+      text-align: center;
+      padding: 15px 60px 0;
+      box-shadow: 0 0 15px #999;
+    }
+    .pur h3 {
+      font-size: 30px;
+      color: #333;
+      line-height: 70px;
+    }
+    .pur span {
+      width: 40px;
+      height: 2px;
+      display: inline-block;
+      background: #61b662;
+      margin-bottom: 10px;
+    }
+    .pur p {
+      color: #333;
+    }
+    .pur p {
+      color: #333;
+    }
+    .purlist ul li {
+      float: left;
+      width: 270px;
+      padding-left: 30px;
+    }
+
+    .purlist {
+      padding: 25px 0 15px;
+      background: rgba(255, 255, 255, 0.6);
+    }
+    .purlist ul li .pic {
+      width: 30%; text-align: center;
+      border-right: 1px solid #a8a89b;
+    }
+    .pic {
+      position: relative;
+      overflow: hidden;
+    }
+    .purltxt {
+      padding-left: 20px;
+    }
+
+    .pull-left {
+      float: left !important;
+    }
+    .pull-left  p {
+      margin: 0 0 10px;
+    }
+
+    .purlist ul li span {
+      color: #187b4c;
+      font-size: 16px;
+      line-height: 25px;
+    }
+    .sect_us {
+
+      background: url(../images/bg03.jpg) bottom center #fff no-repeat;
+      position: relative;
+    }
+    .wrap {
+      width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .article {
+      text-align: left;
+    }
+    .T {
+      padding-bottom: 35px;
+      text-align: center;
+      color: #393a45;
+      text-transform: uppercase;
+    }
+    .row {
+      width: 100%;
+    }
+    h2 {
+      font-size: 30px; line-height: 54px;
+      font-weight: normal;
+    }
+    h1 {
+      font-size: 60px;
+      font-weight: normal;
+      text-transform: uppercase;
+      font-family: -webkit-pictograph;
+      line-height: 1;
+    }
+    h4 {
+      font-size: 14px;
+      font-weight: normal;
+      color: #7e7e7e;
+    }
+      .row:after, .row:before {
+      clear: both;
+      display: table;
+      content: " ";
+    }
+    .span-3 {
+      float: left;
+      margin-right: 2%;
+      width: 23%;
+
+    }
+    .span-6 {
+      float: left;
+      margin-right: 2%;
+      width: 48%;
+
+    }
+    .us_text {
+      padding: 1rem 0;
+      line-height: 2.5;
+      text-indent: 2em;
+    }
+    .sect_us{ margin-top: 80px;}
+    .range_us {
+      margin-top: 80px;
+    }
+
+    .range_us {
+
+      position: relative;
+    }
+    .syaredbg {
+      width: 1073px;
+      height: 408px;
+      background: #c89f64;
+      float: right;
+      margin-top: 54px;
+      position: relative;
+    }
+    .syaredbg .syawhitebg {
+      width: 1216px;
+      height: 395px;
+      background: #fff;
+      position: relative;
+      left: -180px;
+      top: -20px;
+    }
+    .syaleft {
+      border: 10px solid #fbe6e6;
+      width: 517px;
+      height: 279px;
+      margin: 40px 0 0 50px;float: left;
+    }
+
+    .syaleft .pic {
+      position: relative; height: 395px;
+
+    }
+    .syaleft .vcenter {
+      position: absolute;
+      top: -120px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      vertical-align: middle;
+      margin: auto;
+    }
+
+    .syaright{ 
+      width: 520px; padding-top: 60px; padding-right: 50px; float: right;
+    }
+
+    .syaright ul li{
+      width: 130px; margin: 15px 15px 20px 15px; float: left;
+    }
+    .syaright ul li img{
+      width: 130px;
+    }
+
+    .activity_us{ 
+      margin-top: 80px;
+      background: #f5f5f7;
+      position: relative;
+    }
+    .activity_us .wrap{ 
+      padding-top: 30px;
+    }
+    .left_act{
+      float: left;
+      padding-top: 50px; 
+      padding-left: 50px;
+    }
+    .center_act{ 
+        float: left; 
+      padding-left: 100px; 
+      padding-top: 50px;
+    }
+    .right_act{
+      float: right;
+    }
+    .act_box{ 
+      padding: 30px 0px 80px 0px;
+    }
+    .center_act h1{ 
+      font-size: 40px;
+    }
+    .center_act div{ 
+      padding-top: 20px;
+    }
+    .center_act p{
+      margin-top: 30px; font-size: 26px;
+    }
+    .join_us{
+       margin-top: 80px;
+      background: #fff;
+      position: relative;}
+    .join_us .join_box{ 
+      height: 300px;
+      background: url(join.png) 890px 60px no-repeat;
+    }
+
+    .join_box ul li{
+      width: 275px;
+      margin-right: 30px;
+      float: left; 
+      display: inline;
+    }
+    .join_box .num{
+      width:60px;
+      height: 60px;
+      margin: auto; 
+      font-size: 40px;
+      text-align: center; 
+      line-height: 60px; 
+      border: 2px solid #c89f64;
+      border-radius: 100%;
+    }
+    .join_word{ 
+      width: 255px; 
+      padding: 10px; 
+      padding-top: 25px;
+      height: 75px;text-align: center;
+      color: #fff; 
+      font-size: 18px; 
+      margin-top: 20px; 
+      background-color: #c89f64;
+    }
+    .join_box ul li.lxfs{
+      width:240px;
+      margin-right: 0px; 
+    }
+    .join_box ul li.lxfs h1{ 
+      font-size: 34px;
+      height: 64px; 
+      line-height: 64px;
+    }
+    .join_box ul li.lxfs  b{
+      display: inline-block; 
+      font-size: 24px;
+      padding-top: 20px; 
+      color: #c89f64;
+    }
+    .footer{
+       text-align: center; background: #222222;
+      padding: 20px 0px;
+      min-height: 80px;
+      color: #888888;
+      line-height: 30px;
+      padding-top: 35px;
+      font-size: 15px;
+    }
+    #b{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        left: 80%;
+        top: 20%;
+        z-index:999;
+      }
+
+      html,body{
+        height: 100%;
+      }
+      ul,li{
+        list-style: none;
+      }
+      *{
+  padding: 0;
+  margin: 0;
+}
+ul,li{
+  list-style: none;
+}
+.box{
+  width: 1200px;
+  height: 397px;
+  border: 1px solid red;
+  margin: 100px auto;
+  position: relative;
+  overflow: hidden;
+}
+.slider{
+  width: 8400px;
+  position: absolute;
+  left: -1200px;
+}
+.slide{
+  width: 1200px;
+  overflow: hidden;
+  float: left;
+}
+.box>span{
+  display: block;
+  width: 30px;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  top: 175px;
+  line-height: 50px;
+  background: rgb(255,0,0);
+  font-size: 30px;
+  position: absolute;
+  /* display: none; */
+  opacity: 0;
+}
+#left{
+  left: 30px;
+}
+#right{
+  right: 30px;
+}
+.nav{
+  position: absolute;
+  left: 500px;
+  bottom: 20px;
+}
+.nav>li{
+  float: left;
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 50%;
+}
+.nav .active{
+  background: red;
+}
+.slide img{
+  width:1200px;
+  height:400px;
+}
+
+</style>
+<meta charset="UTF-8">
+</head>
+<body>
+  <div id="b"><img  style="width:150px;height:150px"src="syab.png"></div>
+  <div class="header">
+    <div class="top">
+      <div class="top_content">
+         <div class="logo"><a target="_blank" href="#"><img src="logo.png" width="100" ></a></div>
+         <div class="top_le_nav">
+          <a href="#">首页</a>
+          <a target="_blank" href="#">关于我们</a>
+          <a target="_blank" href="#">经营范围</a>
+          <a target="_blank" href="#" >优惠活动</a>
+          <a target="_blank" href="#" >招商合作</a>
+           <form class="form celar">
+              <input type="text" placeholder="搜索" class="search"/>
+              <input type="button" class="submit"/>
+           </form>
+         </div>
+      </div>
+  </div>
+    
+  </div>
+
+  <div class="box" id="box">
+    <div class="slider" id="slider">
+      <div class="slide"><img src="banner5.jpg" alt=""></div>
+      <div class="slide"><img src="banner1.png" alt=""></div>
+      <div class="slide"><img src="banner2.jpg" alt=""></div>
+      <div class="slide"><img src="banner3.jpg" alt=""></div>
+      <div class="slide"><img src="banner4.jpg" alt=""></div>
+      <div class="slide"><img src="banner5.jpg" alt=""></div>
+      <div class="slide"><img src="banner1.png" alt=""></div>
+    </div>
+    <span id="left"><</span>
+    <span id="right">></span>
+    <ul class="nav" id="nav">
+      <li class="active"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+      <div class="wrap index_">
+        <article class="article">
+            <h2>走进食相印</h2>
+            <h1>about us</h1>
+            <h4></h4>
+             <div class="row   slideInUp   " style="visibility: visible; ">
+            <div class="span-3 midd-4 smal-hide"><div class="us_img1"><a href="#" target="_blank"><img src="us1.png"></a></div></div>
+            <div class="span-6 midd-8 smal-12">
+              <div class="us_text">
+                    食相印是一家做进口食品专卖 ,我们产品均来自五大洲110多个国家的特色休闲食品,并严格按照国际食品安全标准，最大满足中国市场对进口食品健康要求。食相印在把握消费品市场商机的前提下，利用其强大的流通优势、资金优势、管理优势，采用先进的经营模式，以产品多样化，服务多元化，渠道多式化的全新业态，打造中国优质品牌“食相印”，致力于将全球优质食品带入中国，尽力打造国内进口食品一流品牌！
+             
+             <br>我们全心全意为您提供新鲜，健康，具性价比的美食，坚信美食的治愈力量。我们追求极致的用户体验，让您吃的爽是我们的职责和能力。我们陪伴在您身边，传播爱与快乐、正能量，为您创造独特的美食世界。发现生活中最单纯的幸福感~
+   </div>
+            </div>
+            <div class="span-3 midd-hide smal-hide"><div class="us_img208"><img src="us2.png"></div></div>
+          </div>
+        </article>
+      </div>
+  <div class="range_us" id="jyfw">
+      <div class="wrap index_">
+        <div class="article">
+            <h2>经营范围</h2>
+            <h1>PRODUCTS</h1>
+            <h4></h4>
+          </header>
+          <div class="range_box">
+            <div class="syaredbg">
+              <div class="syawhitebg">
+                  <div class="syaleft"><div class="pic"><img class="vcenter" src="syab.png" alt="有颜又好吃"></div></div>
+                  <div class="syaright">
+                       <ul>
+                         <li><img src="img1.png" title="果脯蜜饯 " alt="果脯蜜饯 "></li>
+                         <li><img src="img2.png" title="肉脯肉干" alt="肉脯肉干"></li>
+                         <li><img src="img3.png" title="海味即食" alt="海味即食"></li>
+                         <li><img src="img4.png" title="饼干膨化" alt="饼干膨化"></li>
+                         <li><img src="img5.png" title="糕点点" alt="糕点点"></li>
+                         <li><img src="img6.png" title="速溶饮品" alt="速溶饮品"></li>                   
+                       </ul>
+                  </div>
+                  <div class="clear"></div>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+  </div>
+  <div class="activity_us">
+      <div class="wrap index_">
+        <div class="article">
+          <header class="T       " style="visibility: visible; ">
+            <h2>优惠活动</h2>
+            <h1>activity</h1>
+            <h4></h4>
+          </header>
+          <div class="act_box">
+            <div class="left_act"><img src="hl.png"></div>
+            <div class="center_act">
+              <h1>团购来袭,优惠更多！</h1>
+              <div>
+                <p>两人团购，满200各减20元，</p>
+                <p>三人团购，满300各减30元，</p>
+                <p>五人以上团购，满500各减50元！</p>
+              </div>
+            </div>
+            <div class="right_act"><img src="rtimgs.png"></div>
+            <div class="clear"></div>
+          </div>
+         </div>
+       </div>
+  </div>
+
+  <div class="join_us" id="join_us">
+      <div class="wrap index_">
+        <div class="article">
+            <h2>招商合作</h2>
+            <h1>join us</h1>
+            <h4></h4>
+          <div class="join_box">
+            <ul>
+              <li>
+                <div class="num">1</div>
+                <div class="join_word">通过网站或电话咨询<br />
+  公司销售经理了解  </div>
+              </li>
+              <li>
+                <div class="num">2</div>
+                <div class="join_word">洽谈合作：可电话洽谈或<br />
+  直接来参观考察洽谈
+    </div>
+              </li>
+              <li>
+                <div class="num">3</div>
+                <div class="join_word">签订协议<br />
+  确定合作方式
+    </div>
+              </li>
+              <li class="lxfs">
+                <h1>联系方式</h1>
+                <b>010-0000000</b>
+              </li>
+            </ul>
+            
+          </div>
+          
+         </div>
+       </div>
+  </div>
+  <div class="Purpose">
+    <div class="container2">
+      <div class="pur">
+        <h3>我们的宗旨</h3>
+        <span></span>
+        <p>您不仅可以买到低价美味、来自全球各地的精选零食，根据不同时间段，我们还制做优惠活动方案。</p>
+        <p>一切都是为了让您更好地享受美食与生活，同时也向消费者传递一份健康、乐活、充满正能量的生活态度！</p>
+      </div>
+      <div class="purlist">
+        <ul class="clearfix">
+          <li class="clearfix">
+            <div class="pic pull-left"><img class="vcenter" src="pur1.png" alt=""></div>
+            <div class="purltxt pull-left">
+              <span>全球精选</span>
+              <p>最实惠的购物方案</p>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div class="pic pull-left"><img class="vcenter" src="pur2.png" alt=""></div>
+            <div class="purltxt pull-left">
+              <span>仓库直发</span>
+              <p>24小时内快速发货服务</p>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div class="pic pull-left"><img class="vcenter" src="pur3.png" alt=""></div>
+            <div class="purltxt pull-left">
+              <span>源头直采</span>
+              <p>精选正宗好食品</p>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div class="pic pull-left"><img class="vcenter" src="pur4.png" alt=""></div>
+            <div class="purltxt pull-left">
+              <span>天天底价</span>
+              <p>零食到家购不停</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+   <div class="footer">
+    <p>服务热线：400-000-0000 合作电话：000-0000000 传真：000-0000000</p>
+    <p>网络科技有限公司 版权所有 </p>
+  </div>
+  <script>
+      var b = document.getElementById('b');
+      var maxTop = document.body.clientHeight - 150;
+      var maxLeft = document.body.clientWidth - 150;
+      var speedY = 2; 
+      var speedX = 3; 
+      function move(){
+          var curLeft = parseInt( getStyle(b,'left') );
+          var curTop = parseInt( getStyle(b,'top') );
+
+          if(curTop > maxTop || curTop<0){
+              speedY = -speedY;
+          }
+          if(curLeft > maxLeft || curLeft<0){
+              speedX = -speedX;
+          }
+          b.style.left = curLeft + speedX + 'px';  
+          b.style.top = curTop + speedY + 'px';  
+
+      }
+      
+      var id = setInterval(move,50)
+
+      b.onmouseout = function(){
+          id = setInterval(move,50)
+      }
+      b.onmouseover = function(){
+          clearInterval(id)
+      }
+      b.onclick = function(){
+          document.body.removeChild(this);
+      }
+      
+      function getStyle(obj,attr){
+          if(obj.currentStyle){
+              return obj.currentStyle[attr];
+          }else{
+              return getComputedStyle(obj)[attr]
+          }
+      }
+      var box = document.getElementById('box');
+    var oNavlist = document.getElementById('nav').children;
+    var slider = document.getElementById('slider');
+    var left = document.getElementById('left');
+    var right = document.getElementById('right');
+    var index = 1;
+    var timer;
+    var isMoving = false;
+    box.onmouseover = function(){
+      animate(left,{opacity:50})
+      animate(right,{opacity:50})
+      clearInterval(timer)
+    }
+    box.onmouseout = function(){
+      animate(left,{opacity:0})
+      animate(right,{opacity:0})
+      timer = setInterval(next, 3000);
+    }
+    right.onclick = next;
+    left.onclick = prev;
+    for( var i=0; i<oNavlist.length; i++ ){
+      oNavlist[i].index = i;
+      oNavlist[i].onclick = function(){
+        index = this.index+1;
+        navmove();
+        animate(slider,{left:-1200*index});
+      }
+    }
+    function next(){
+      if(isMoving){
+        return;
+      }
+      isMoving = true;
+      index++;
+      navmove();
+      animate(slider,{left:-1200*index},function(){
+        if(index==6){
+          slider.style.left = '-1200px';
+          index = 1;
+        }
+        isMoving = false;
+      });
+    }
+    function prev(){
+      if(isMoving){
+        return;
+      }
+      isMoving = true;
+      index--;
+      navmove();
+      animate(slider,{left:-1200*index},function(){
+        if(index==0){
+          slider.style.left = '-6000px';
+          index = 5;
+        }
+        isMoving = false;
+      });
+    }
+    function navmove(){
+      for( var i=0; i<oNavlist.length; i++ ){
+        oNavlist[i].className = "";
+      }
+      if(index >5 ){
+        oNavlist[0].className = "active";
+      }else if(index<=0){
+        oNavlist[4].className = "active";
+      }else {
+        oNavlist[index-1].className = "active";
+      }
+    }
+    timer = setInterval(next, 3000);
+    function getStyle(obj, attr){
+  if(obj.currentStyle){
+    return obj.currentStyle[attr];
+  } else {
+    return getComputedStyle(obj, null)[attr];
+  }
+}
+function animate(obj,json,callback){
+  clearInterval(obj.timer);
+  obj.timer = setInterval(function(){
+    var isStop = true;
+    for(var attr in json){
+      var now = 0;
+      if(attr == 'opacity'){
+        now = parseInt(getStyle(obj,attr)*100);
+      }else{
+        now = parseInt(getStyle(obj,attr));
+      }
+      var speed = (json[attr] - now) / 8;
+      speed = speed>0?Math.ceil(speed):Math.floor(speed);
+      var cur = now + speed;
+      if(attr == 'opacity'){
+        obj.style[attr] = cur / 100;
+      }else{
+        obj.style[attr] = cur + 'px';
+      }
+      if(json[attr] !== cur){
+        isStop = false;
+      }
+    }
+    if(isStop){
+      clearInterval(obj.timer);
+      callback&&callback();
+    }
+  }, 30)
+}
+    </script>
+</body>
+</html>
+
